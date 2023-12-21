@@ -17,25 +17,29 @@
             />
           </svg>
         </div>
+       
         <ul
           tabindex="0"
           class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
         >
           <li><a href="/home">Home</a></li>
-          <li><a>About</a></li>
-          <li><a>Support</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#support">Support</a></li>
         </ul>
       </div>
-      <a class="btn btn-ghost text-xl">Carlano</a>
+      <a href="/home" class="btn btn-ghost text-xl">Carlano</a>
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
-        <li><a>Home</a></li>
-        <li><a>About</a></li>
-        <li><a>Support</a></li>
+        <li><a href="/home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#support">Support</a></li>
       </ul>
     </div>
     <div class="navbar-end">
-      <a class="btn btn-neutral">SignIn</a>
+      <a href="/auth/signin" class="btn btn-neutral">SignIn</a>
+      &nbsp;
+      <a href="/auth/signup" class="btn">SignUp</a>
     </div>
   </div>
+

@@ -22,7 +22,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="{{ url_for('static/css'), filename='style.css' }}">
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
       integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ=="
@@ -72,7 +71,7 @@
       class="hero bg-base-200"
       style="padding-top: 50px; padding-bottom: 50px"
     >
-      <div class="hero-content text-center">
+      <div class="hero-content text-center" id="about">
         <div class="max-w-md">
           <h1 class="text-4xl font-bold">How Carlano Works</h1>
           <p class="py-6">
@@ -137,7 +136,7 @@
             No. 1 Choice
           </div>
           <h1 class="text-4xl font-bold text-black">Why you will love us</h1>
-          <p class="py-6 text-black">Here's how you schedule your pickup</p>
+          <p class="py-6 text-black">Here's why customers prefer our services</p>
           <p class="py-2 text-black">
             <i
               class="fa-solid fa-check-double"
@@ -171,7 +170,7 @@
     </div>
 
     <!---------support---->
-    <div class="flex items-center justify-center h-screen bg-gray-100">
+    <div class="flex items-center justify-center h-screen bg-gray-100" id="support">
       <div class="w-96">
         <div class="bg-white p-8 rounded shadow" style="border-radius: 10px">
           <h2 class="text-3xl font-bold mb-4">Get in touch with us</h2>
