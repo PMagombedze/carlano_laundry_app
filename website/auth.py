@@ -8,6 +8,20 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from . import db
 from flask_login import login_user, logout_user, login_required, current_user
 
+import re
+
+def is_secure_password(password):
+    if len(password) < 8:
+        return False
+    if not re.search(r"\d",password):
+        return False
+    if not re.search(r"[A-Z]", password):
+        return False
+    if not re.search(r"[a-z]",password):
+        return False
+    return True
+
+
 auth = Blueprint("auth", __name__)
 
 @auth.route('/signin', methods=['GET', 'POST'])
@@ -45,8 +59,8 @@ def signup():
         user = User.query.filter_by(email=email).first()
         if user:
             flash('Email already exists', category='error')
-        elif len(email) < 5:
-            flash('Invalid email address', category='warning')
+        elif is_secure_password(password) == False:
+            flash('Password should contain at least a symbol and uppercase characters', category='warning')
         elif password != passwordCfrm:
             flash('Passwords did not match', category='error')
         else:
